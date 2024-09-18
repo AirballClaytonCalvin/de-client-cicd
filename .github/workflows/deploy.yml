@@ -24,10 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         if [ -z "${{ inputs.de_client_version }}" ]; then
           # If no version is specified, install the latest version
-          pip install de-client --extra-index-url=https://${{ inputs.DE_HOST }}/packages
+          pip install de-client --extra-index-url=https://${{secrets.DE_HOST}}/packages
         else
           # Install the specified version
-          pip install de-client==${{ inputs.de_client_version }} --extra-index-url=https://${{ inputs.DE_HOST }}/packages
+          pip install de-client==${{ inputs.de_client_version }} --extra-index-url=https://${{ secrets.DE_HOST }}/packages
         fi
     - name: Generate app name
       id: app_name
