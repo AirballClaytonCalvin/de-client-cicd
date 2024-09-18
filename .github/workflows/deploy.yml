@@ -80,7 +80,3 @@ jobs:
         DASH_ENTERPRISE_HOST: ${{secrets.DE_HOST}}
         DASH_ENTERPRISE_PASSWORD: ${{secrets.DE_PASSWORD}}
         DASH_ENTERPRISE_USERNAME: ${{secrets.DE_USERNAME}}
-
-branding:
-  icon: activity
-  color: purple
